@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="p" >测试内容。。。。。。。。。</p>
+    <textarea name=""  cols="30" rows="10" id="test"></textarea>
+    <input type="text" id="input">
+    <button  id="copy">复制</button>
+</body>
+
+<script>
+    var test = document.getElementById("test");
+    var input = document.getElementById("input");
+    document.getElementById("copy").addEventListener("click",function( ){
+        console.log("复制");
+        test.select()
+//                input.select()
+        document.execCommand("copy")
+    })
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css" >
+        body{
+            height: 2000px;
+        }
+        .draggable{
+            position: absolute;
+            left: 50px;
+            bottom: 80px;
+            width: 100px;
+            height: 100px;
+            background: rgba(200,0,200,0.5);
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <div class="draggable"></div>
+    <script>
+//        在document上绑定事件解决拖动到外面导致不继续的问题
+        var canDrag = false
+        var drag = document.querySelector(".draggable")
+        var diffX = 0
+        var diffY = 0
+        document.addEventListener("mousedown",function (event) {
+            console.log(event.target);
+            canDrag =true
+            diffX = event.clientX - event.target.offsetLeft
+            diffY = event.clientY - event.target.offsetTop
+        })
+        document.addEventListener("mousemove",function (event) {
+            if (canDrag){
+                drag.style.left = event.clientX - diffX + "px"
+                //有滚动条出现时，必须使用pageY
+                console.log(event.clientY, event.pageY);
+                drag.style.top = event.pageY  - diffX + "px"
+            }
+        })
+        document.addEventListener("mouseup",function (event) {
+            canDrag = false
+        })
+
+    </script>
+</body>
+</html>
