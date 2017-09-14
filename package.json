@@ -1,0 +1,23 @@
+{
+  "name": "web-study-test",
+  "version": "1.0.0",
+  "description": "web开发中遇到的小知识点和学习\r 每个html或者一个文件夹 代表一个学习点",
+  "main": "lodash-test.js",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangruinian/web-study-test.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangruinian/web-study-test/issues"
+  },
+  "homepage": "https://github.com/zhangruinian/web-study-test#readme"
+}
