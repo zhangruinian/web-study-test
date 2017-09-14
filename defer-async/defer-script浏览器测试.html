@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>defer</title>
+
+</head>
+<body>
+
+<!--// 现代浏览器没有src的话不支持dfer 所以先 defer后script-->
+<!--<script defer>
+    console.log('defer')
+</script>-->
+<script defer src="defer.js"></script>
+<!--async 动态加载的脚本默认为true, 可设置false达到defer效果-->
+<script async = false src="async-false.js"></script>
+<p>1111111</p>
+
+<script>
+    console.log('script')
+</script>
+<script>
+    // dom 优先于loaded加载执行
+    window.onload = function () {
+        console.log('loaded')
+    }
+</script>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        console.log('dom已加载')
+    })
+</script>
+</body>
+</html>
