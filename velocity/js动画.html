@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body{
+        body {
             height: 2000px;
             background-color: aqua;
         }
-        span{
+
+        span {
             display: inline-block;
             width: 80px;
             height: 30px;
@@ -20,20 +21,26 @@
     </style>
 </head>
 <body>
-    <span class="back">回到顶部</span>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
-    <script>
-        document.querySelector('.back').addEventListener('click',function () {
+<span class="back">回到顶部</span>
+<div class="test">动画测试</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+<script>
+    document.querySelector('.back').addEventListener('click', function () {
 //            Velocity(window, {scrollY:0})
-//            Velocity(document.body, { opacity: 0.2 }, 1000);
+        Velocity(document.body, {opacity: 0.2}, 1000)
 
-            // scrooll fadein等是预定义动画指令
+        // scrooll fadein等是预定义动画指令
 //           Velocity(document.body, 'scroll', 500);
-//        ok    Velocity(document.body, 'scroll', {duration:500});
+        Velocity(document.body, 'scroll', {duration: 500})
 //    x        Velocity(document.body, {scroll:0}, 500);
 
-
-        })
-    </script>
+    })
+    document.querySelector('.test').addEventListener('click', function () {
+//        Velocity(document.querySelector('.test'),{translateX:'200px'},{duration:1000})
+//        Velocity(document.querySelector('.test'),{skewX: "30deg"},{duration:1000})
+//        Velocity(document.querySelector('.test'),{rotateX: "180"},{duration:1000})
+        Velocity(document.querySelector('.test'),{backgroundColor: "#ff0000"},{duration:3000})
+    })
+</script>
 </body>
 </html>
