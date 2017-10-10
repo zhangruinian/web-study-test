@@ -2,47 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b919c596-f929-464c-acc5-a8b445726b26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/sec1-map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/响应式web设计第二版/lks.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/background-image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/defer-async/async-false.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/defer-async/defer-script浏览器测试.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/defer-async/defer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drag拖放.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input-placeholder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/line-height-vertial-align.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lodash-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requestAnimationFrame+tween.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrollReveal/html使用方与webpack的npm使用区别.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrollReveal/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/select-copy-execCommand.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/.idea/simple-web-worker-gh-pages.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/CODE_OF_CONDUCT.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-web-worker-gh-pages/worker/worker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/svg-学习-css以及js动画/svg-css动画.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/velocity/js动画.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/velocity/svg-动画.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/velocity/velocity.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/响应式web设计第二版/3d翻转.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/响应式web设计第二版/animation-float.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/响应式web设计第二版/css滤镜-filter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/响应式web设计第二版/img-width-height.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grid-网格布局/study1-网格轨道.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grid-网格布局/study2-fr单位.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grid-网格布局/基本示例.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,40 +28,48 @@
       <file leaf-file-name="js动画.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/velocity/js动画.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="621">
               <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="svg-动画.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/velocity/svg-动画.html">
+      <file leaf-file-name="svg-css动画.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/svg-学习-css以及js动画/svg-css动画.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-185">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="317">
+              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="velocity.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/velocity/velocity.js">
+      <file leaf-file-name="基本示例.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grid-网格布局/基本示例.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7636">
-              <caret line="3" column="12459" lean-forward="false" selection-start-line="3" selection-start-column="12459" selection-end-line="3" selection-end-column="12459" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="207">
+              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="svg-css动画.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/svg-学习-css以及js动画/svg-css动画.html">
+      <file leaf-file-name="study1-网格轨道.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grid-网格布局/study1-网格轨道.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="138">
+              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="study2-fr单位.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grid-网格布局/study2-fr单位.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -107,9 +78,12 @@
       <file leaf-file-name="html使用方与webpack的npm使用区别.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrollReveal/html使用方与webpack的npm使用区别.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="529">
+              <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+              <folding>
+                <marker date="1507605913459" expanded="true" signature="771:790" ph="..." />
+                <marker date="1507605913459" expanded="true" signature="771:798" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,8 +112,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="161">
-                <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <first_editor relative-caret-position="69">
+                <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -152,16 +126,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="529">
               <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="css滤镜-filter.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/响应式web设计第二版/css滤镜-filter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -216,6 +180,9 @@
         <option value="$PROJECT_DIR$/velocity/svg-动画.html" />
         <option value="$PROJECT_DIR$/svg-学习-css以及js动画/svg-css动画.html" />
         <option value="$PROJECT_DIR$/scrollReveal/html使用方与webpack的npm使用区别.html" />
+        <option value="$PROJECT_DIR$/grid-网格布局/基本示例.html" />
+        <option value="$PROJECT_DIR$/grid-网格布局/study1.html" />
+        <option value="$PROJECT_DIR$/grid-网格布局/study2-fr单位.html" />
       </list>
     </option>
   </component>
@@ -237,6 +204,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -255,7 +223,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -267,35 +234,32 @@
             <path>
               <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
-              <item name="svg-学习-css以及js动画" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
-              <item name="velocity" type="462c0819:PsiDirectoryNode" />
+              <item name="grid-网格布局" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/geetest/ggd-front-doc" />
+    <property name="last_opened_file_path" value="C:/geetest/gd-index" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="add_unversioned_files" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\front-end\web-study-test\defer-async" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\front-end\web-study-test\grid-网格布局" />
       <recent name="C:\front-end\web-study-test\响应式web设计第二版" />
       <recent name="C:\front-end\web-study-test\imgs" />
       <recent name="C:\front-end\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\front-end\web-study-test\defer-async" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -350,23 +314,25 @@
       <workItem from="1505888413028" duration="69000" />
       <workItem from="1505959375933" duration="4646000" />
       <workItem from="1507616434259" duration="1440000" />
+      <workItem from="1507618189150" duration="5454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100047000" />
+    <option name="totallyTimeSpent" value="105501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16213334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16373333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Weex Documents" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32100108" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32100108" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -415,30 +381,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/drag拖放.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -730,8 +672,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="161">
-            <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <first_editor relative-caret-position="69">
+            <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -742,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="8933" lean-forward="true" selection-start-line="0" selection-start-column="8933" selection-end-line="0" selection-end-column="8933" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,33 +697,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrollReveal/html使用方与webpack的npm使用区别.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/velocity/velocity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7636">
-          <caret line="3" column="12459" lean-forward="false" selection-start-line="3" selection-start-column="12459" selection-end-line="3" selection-end-column="12459" />
+        <state relative-caret-position="529">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1507605913459" expanded="true" signature="771:790" ph="..." />
+            <marker date="1507605913459" expanded="true" signature="771:798" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/velocity/svg-动画.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/velocity/velocity.js" />
+    <entry file="file://$PROJECT_DIR$/velocity/svg-动画.html" />
     <entry file="file://$PROJECT_DIR$/velocity/js动画.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="621">
           <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
           <folding />
         </state>
@@ -790,8 +718,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/svg-学习-css以及js动画/svg-css动画.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="317">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid-网格布局/基本示例.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid-网格布局/study1-网格轨道.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid-网格布局/study2-fr单位.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding />
         </state>
       </provider>
