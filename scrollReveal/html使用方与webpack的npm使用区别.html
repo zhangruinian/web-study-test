@@ -10,18 +10,27 @@
             color: #fff;
             background-color: royalblue;
         }
+        .test2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 1000px;
+        }
     </style>
 </head>
 <body>
-    <div class="test"  data-sr='enter bottom move 0px after 4.5s'>
+    <div class="test">
         test
     </div>
+    <div class="test2">2222222</div>
 <script src="sr.js"></script>
 <script>
     (function () {
         window.sr = ScrollReveal();
-        sr.reveal('.test')
+//        之前配置在html上,现在配置在sr上面,也可以和其他利用css class结合
+        sr.reveal('.test2', {opacity: 0.5, delay: 200, distance: '200px', origin: 'right' })
 
+        sr.reveal('.test')
     })()
 
 </script>

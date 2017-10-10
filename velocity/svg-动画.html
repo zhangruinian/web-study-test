@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        svg {
+            display: block;
+            width: 500px;
+        }
+
+        rect {
+            transform-origin: 0% 0%;
+        }
+    </style>
+</head>
+<body>
+<svg>
+    <!--id写在svg上面时动画效果发生混乱-->
+    <rect id="rect" width="25" height="25" x="10%" y="10%" fill="gray" stroke="rgba(80, 80, 80, 1)"
+          stroke-width="0px"></rect>
+</svg>
+<!--<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+<script>
+    //    console.log(velocity)
+
+    Velocity(document.getElementById('rect'), {
+        opacity: 0.5
+    }, {
+        duration: 1000
+    })
+//    jquery存在的时候会影响导致报错Velocity未定义
+
+//    jeuery特有的链式调用,简化了写法 .velocity代替.animate()  直接写就会一个动画接着一个 链式只是改变写法,实质没变
+    Velocity(document.querySelector('#rect'), {x: '+=200', y: '25%'})
+    Velocity(document.querySelector('#rect'), {rotateZ: 90, scaleX: 0.5}, function () {
+        console.log(11)
+    })
+    Velocity(document.querySelector('#rect'), 'reverse', {delay: 250})
+
+    /*
+    $('#rect')
+        .delay(500)
+        .velocity({x: '+=200', y: '25%'})
+        .velocity({fillGreen: 255, strokeWidth: 2})
+        .velocity({height: 50, width: 50})
+        .velocity({rotateZ: 90, scaleX: 0.5})
+        .velocity('reverse', {delay: 250})
+    */
+
+</script>
+</body>
+</html>
