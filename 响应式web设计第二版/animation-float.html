@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>http://www.geetest.com/aboutUs.html</title>
+    <!--不同的animation float不同效果-->
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background-color: aqua;
+        }
+        li{
+            width: 40px;
+            height: 35px;
+            background-color: antiquewhite;
+            position: absolute;
+            left: 20px;
+            top: 40px;
+            transition: all 1.6s ease;
+            animation: ani-float linear infinite 1s;
+            transform-origin: 50% 1px;
+        }
+        li:nth-child(2){
+            top: 90px;
+        }
+        li:nth-child(3){
+            left: 160px;
+        }
+        @keyframes ani-float {
+            0%{
+                transform: rotate(0deg) translate(-10px) rotate(0deg);
+
+                /*下面是转圈*/
+                /*transform: rotate(0deg) translate(-10px)*/
+            }
+            100%{
+                /*多加totate(-360deg)才会缓速运动*/
+                transform: rotate(360deg) translate(-10px) rotate(-360deg)
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <li>111</li>
+        <li>22</li>
+        <li>333</li>
+        <li>44</li>
+        <li>555</li>
+    </div>
+</body>
+</html>

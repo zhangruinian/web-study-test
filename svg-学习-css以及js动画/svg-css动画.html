@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .mypath {
+            stroke: #05D380;
+            stroke-width: 2;
+            stroke-dasharray: 888;
+            stroke-dashoffset: 888;
+            fill: none;
+            animation: go 4s ease-in-out forwards;
+        }
+        @-webkit-keyframes go {
+            0% {
+                stroke-dashoffset: 888;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<svg >
+    <path d="M100 100, A120 120, -45 0 1, 300 300 A120 120, -45 0 1, 100 100" class="mypath"/>
+</svg>
+<script>
+    console.log(document.querySelector('.mypath').getTotalLength())
+</script>
+</body>
+</html>
