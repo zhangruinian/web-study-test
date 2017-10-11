@@ -18,6 +18,9 @@
             bottom: 20px;
             right: 20px;
         }
+        div.test{
+            margin-top: 300px;
+        }
     </style>
 </head>
 <body>
@@ -40,6 +43,8 @@
 //        Velocity(document.querySelector('.test'),{skewX: "30deg"},{duration:1000})
 //        Velocity(document.querySelector('.test'),{rotateX: "180"},{duration:1000})
         Velocity(document.querySelector('.test'),{backgroundColor: "#ff0000"},{duration:3000})
+        Velocity(document.body, {opacity: 0.2}, 1000)
+        Velocity(document.body, 'scroll', {duration: 500})
     })
 </script>
 </body>

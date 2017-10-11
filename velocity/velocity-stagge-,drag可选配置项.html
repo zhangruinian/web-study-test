@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script src="velocity.js"></script>
+    <script src="velocity.ui.js"></script>
+    <script>
+//        Velocity(document.querySelectorAll('.box'), 'transition.slideLeftBigIn', {stagger: 300})
+//        Velocity(document.querySelectorAll('.box'), 'transition.slideLeftBigIn', {drag: true})
+        Velocity(document.querySelectorAll('.box'), 'transition.slideLeftBigIn', {stagger: 300, backwards: true})
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .queue{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .queue2 {
+            background-color: #05D380;
+        }
+        .callout{
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+        }
+        .transition{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="queue queue1"></div>
+    <div class="queue queue2"></div>
+    <div class="callout"></div>
+    <div class="transition"></div>
+    <script src="velocity.js"></script>
+    <script src="velocity.ui.js"></script>
+    <script>
+        // 下面的嵌套无论是回调还是then都不好管理 维护 所以有了使用velocity.ui 的runSeqyence的必要
+       /* Velocity(document.querySelector('.queue1'), {width: "250px"}, 2000)
+            .then(() =>{
+                Velocity(document.querySelector('.queue2'), {height: "350px"}, 2000)
+            })*/
+
+       // 将嵌套动画序列储存到一个数组里，很清晰的显示了它们的执行顺序
+        let testSequence = [
+            { e: document.querySelector('.queue1'), p: {width: "250px"}, o: {duration: 2000} },
+            { e: document.querySelector('.queue2'), p: {height: "250px"}, o: {duration: 2000} },
+        ]
+
+        // 调用这个自定义的序列名称 还可以在其他地方复用
+        Velocity.RunSequence(testSequence)
+        /*setTimeout(function() {
+            /!* 1.5秒后 开始并行执行高度变为"150px"的新动画 *!/
+            // 此时是先完成width的动画,然后才进行高, 并没有强制执行新动画
+            // Velocity(document.querySelector('.queue'), {height: "250px"}, 1500)
+
+            // queue false强制执行新动画立即执行
+             Velocity(document.querySelector('.queue'), {height: "250px"}, {duration:1500, queue:false})
+                 .then(() =>{
+                    // 结合es6 promise对于流程控制方便很多
+                     console.log("动画结束,做点什么?")
+                 })
+
+        }, 1500);*/
+
+        // 当duration时间长的时候，持续时间，动画会很慢 每一帧很慢
+        Velocity(document.querySelector('.callout'), 'callout.swing', {duration: 1000})
+        Velocity(document.querySelector('.transition'), 'transition.whirlOut', {duration: 1000})
+    </script>
+</body>
+</html>
