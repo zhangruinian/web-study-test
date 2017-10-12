@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+<h1>Example Text 我是中国人</h1>
+<br>
+<button class="btn">start</button>
+<script src="../libs/jquery-3.2.1.min.js"></script>
+<script src="../libs/blast.js"></script>
+<script src="velocity.js"></script>
+<script src="velocity.ui.js"></script>
+<script>
+    $(function () {
+        $('.btn').on('click', function () {
+            // velocity与jquery混用时候 Velocity未定义会报错,只能使用jquery的调用方式
+           /* Velocity($('h1'), 'transition.fadeOut', {
+                stagger: 50,
+                backwards: true
+            })*/
 
+            $.Velocity.animate($('h1'), 'transition.fadeOut',{
+                stagger: 50,
+                backwards: true
+            })
+            .then(() => {
+                $('h1')
+                .html('new messafe')
+                .blast({delimiter: 'word'})
+                .css('opacity', 0)
+                .velocity('transition.fadeIn', {stagger: 90})
+            })
+        })
+    })
+</script>
 </body>
 </html>

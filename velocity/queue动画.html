@@ -41,7 +41,8 @@
        // 将嵌套动画序列储存到一个数组里，很清晰的显示了它们的执行顺序
         let testSequence = [
             { e: document.querySelector('.queue1'), p: {width: "250px"}, o: {duration: 2000} },
-            { e: document.querySelector('.queue2'), p: {height: "250px"}, o: {duration: 2000} },
+            //加上 sequenceQueue之后就是并行运行 方便控制 免得各种回调之类
+            { e: document.querySelector('.queue2'), p: {height: "250px"}, o: {duration: 2000, sequenceQueue: false} },
         ]
 
         // 调用这个自定义的序列名称 还可以在其他地方复用
