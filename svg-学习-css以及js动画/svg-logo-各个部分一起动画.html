@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <svg >
+       <circle cx="100" cy="100" r="30" class="left" style="fill: red"></circle>
+       <circle cx="100" cy="100" r="30" class="right" style="fill: orange"></circle>
+    </svg>
+    <script src="../libs/velocity.js"></script>
+    <script>
+        Velocity(document.querySelector('.left'),{ cx: "-=15px",}, {easeing: 'spring', delay: 300})
+        Velocity(document.querySelector('.right'),{ cx: "+=15px",}, {easeing: 'spring', delay: 300})
+
+        document.querySelector('svg').onmousenter = reverse
+        document.querySelector('svg').onmouseout = reverse
+
+        function reverse() {
+            console.log('over')
+            Velocity(document.querySelector('.left'), 'reverse')
+            Velocity(document.querySelector('.right'), 'reverse')
+        }
+    </script>
+    </body>
+    </html>

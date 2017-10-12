@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<svg >
+   <circle cx="100" cy="100" r="35" class="graph"></circle>
+</svg>
+<script src="../libs/velocity.js"></script>
+<script>
+    console.log(document.querySelector('.graph').getTotalLength())
+    console.log(Math.PI*2*35)
+    // 颜色不支持green关键字
+    // velocity 对表象属性也支持
+
+    /* Velocity(document.querySelector('.graph'),{
+        fill: "#ddd",
+        stroke: '#ff0000',
+        cx: 200,
+        r: 50
+    }, 2000) */
+    // 定位属性 x cx cy VS 变换transform 都是硬件加速 浏览器支持度不同 IE11不支持svg的css transform变换
+    Velocity(document.querySelector('.graph'),{
+        fill: "#ddd",
+        stroke: '#ff0000',
+        translateX: 200,
+    }, 2000)
+</script>
+</body>
+</html>
