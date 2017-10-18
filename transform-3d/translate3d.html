@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       .stage{
+           width: 1000px;
+           height: 600px;
+           margin: 0 auto;
+           position: relative;
+           /*值越小,3d效果越明显*/
+
+           /*perspective 与translateZ*/
+           perspective: 1220px;
+       }
+        .container{
+            position: absolute;
+            transform-style: preserve-3d;
+            top: 50%;
+            left: 50%;
+        }
+        .container img{
+            position: absolute;
+            transform: translate(-50%);
+        }
+        .container img:nth-child(1){
+            opacity: 0.6;
+            z-index: 1;
+        }
+        .s1 img:nth-child(2){
+            z-index: 2;
+            /*-200的时候很小 在后面*/
+            /*x y 正常二维 此时 三维平移只是近大远小*/
+            transform: translate3d(30px, 30px, -200px);
+        }
+       .s2 img:nth-child(2){
+           z-index: 2;
+           transform: translate3d(30px, 30px, -200px);
+       }
+    </style>
+</head>
+<body>
+<div class="stage">
+    <div class="container s1">
+        <img src="card.png" alt="" title="wu">
+        <img src="card.png" alt="">
+    </div>
+    <!--<div class="container s2">
+        <img src="card.png" alt="">
+        <img src="card.png" alt="">
+    </div>-->
+</div>
+
+</body>
+</html>
