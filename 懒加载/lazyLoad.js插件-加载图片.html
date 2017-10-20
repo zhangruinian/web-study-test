@@ -9,6 +9,13 @@
         }
         .place{
             margin-top: 400px;
+            background-color: red;
+            width: 400px;
+            height: 50px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -22,8 +29,31 @@
     <div class="place">444</div>
     <script src="lazyload.min.js"></script>
     <script>
+        // window.innerHeight 包括底部的横向滚动条, > document.documentElement.clientHeight不包括底部横向滚动条高度
         console.log(lazyload())
         lazyload()
+
+
+        function elementInViewport(el) {
+            var rect = el.getBoundingClientRect()
+            var html = document.documentElement;
+            // 此时的top加上的有滚动距离,也就是在page文档流中计算的
+            // 先搞懂这几个值具体指的什么再说 right是left+ 自身width bottom 是top + 自身height
+            console.log(rect)
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || html.clientHeight) && /*or $(window).height() */
+                rect.right <= (window.innerWidth || html.clientWidth)
+            )
+        }
+        var place = document.getElementsByClassName('place')[0]
+        window.addEventListener('scroll', function () {
+            console.log(elementInViewport(place))
+        })
+        window.addEventListener('DOMContentLoaded', function () {
+            console.log(elementInViewport(place))
+        })
     </script>
 </body>
 </html>
