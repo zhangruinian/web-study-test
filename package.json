@@ -4,6 +4,7 @@
   "description": "web开发中遇到的小知识点和学习\r 每个html或者一个文件夹 代表一个学习点",
   "main": "lodash-test.js",
   "dependencies": {
+    "lazyload": "^2.0.0-beta.2",
     "lodash": "^4.17.4"
   },
   "devDependencies": {},
