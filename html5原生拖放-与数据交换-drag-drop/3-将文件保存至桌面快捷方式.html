@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            width: 80px;
+            height: 80px;
+            border: 1px solid green;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<!--可以通过拖动操作来把文件从浏览器中保存至桌面升序的方法。可以按照下列的格式，将数据设置于dataTransfer,以实现通过拖动操作讲文件从浏览器保存至桌面程序。
+event.dataTransfer.setData("DownloadURL","MIMETYPE:文件名:文件URL");
+通过这个功能，就能够实现与原声应用之间的双向文件收发。使桌面环境中运行的Web应用程序的实用性得到了飞跃性的提高。
+下面的是一个文件下载的实例。-->
+<a href="https://feday.fequan.com/%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB-winter.pdf" data-downloadurl="application/pdf:前端的自我修养winter.pdf:https://feday.fequan.com/%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB-winter.pdf">download pdf1</a>
+<a href="https://feday.fequan.com/%E5%BE%AE%E4%BF%A1%20Web%20App%20%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E6%B1%9F%E5%89%91%E9%94%8B.pdf" data-downloadurl="application/pdf:微信app开发最佳实践.pdf:https://feday.fequan.com/%E5%BE%AE%E4%BF%A1%20Web%20App%20%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E6%B1%9F%E5%89%91%E9%94%8B.pdf">download pdf2</a>
+</body>
+<script>
+    let files = document.querySelectorAll('.dragobj')
+     Array.from(files).forEach((file) =>{
+        file.addEventListener('dragstart', (event) =>{
+            event.dataTransfer.setData("DownloadURL",this.dataset.downloadurl);
+        }, false)
+         // 其实也只是弄了一个浏览器快捷方式而已
+     })
+</script>
+</html>

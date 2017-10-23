@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 220px;
+            height: 220px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div draggable="true">draggable//////</div>
+<div id="dropElement">drop here 放到这里</div>
+</body>
+<script>
+    var dropElement = document.querySelector('#dropElement')
+    
+    dropElement.ondragover = function (e) {
+        console.log(2)
+        e.preventDefault()
+    }
+
+    dropElement.ondrop = function (e) {
+       if(e.dataTransfer.files.length){
+           console.log('拖动了多个文件')
+           let file = e.dataTransfer.files[0]
+           console.log(file)
+       }
+       e.preventDefault()
+    }
+</script>
+</html>

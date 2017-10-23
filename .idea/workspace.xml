@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b919c596-f929-464c-acc5-a8b445726b26" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/1-drag-drop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/2-拖动桌面程序多个文件.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/3-将文件保存至桌面快捷方式.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/懒加载/lazyLoad.js插件-加载图片.html" afterPath="$PROJECT_DIR$/懒加载/lazyLoad.js插件-加载图片.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,95 +28,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="svg-js动画.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/svg-学习-css以及js动画/svg-js动画.html">
+      <file leaf-file-name="1-drag-drop.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/1-drag-drop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="483">
+              <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotate3d.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transform-3d/rotate3d.html">
+      <file leaf-file-name="2-拖动桌面程序多个文件.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/2-拖动桌面程序多个文件.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="253">
+              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transform-style.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transform-3d/transform-style.html">
+      <file leaf-file-name="3-将文件保存至桌面快捷方式.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/3-将文件保存至桌面快捷方式.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="414">
+              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="perspective.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transform-3d/perspective.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="translate3d.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transform-3d/translate3d.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="三角形制作原理.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/三角形制作原理.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lazyLoad.js插件-加载图片.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/懒加载/lazyLoad.js插件-加载图片.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/懒加载/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="92">
-                <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -132,7 +71,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>conso</find>
+      <find>dataTransfer</find>
+      <find>dragElement</find>
+      <find>dropElement</find>
     </findStrings>
+    <replaceStrings>
+      <replace>dataTransfer</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/draggable.html" />
         <option value="$PROJECT_DIR$/line-height-vertial-align.html" />
         <option value="$PROJECT_DIR$/input-placeholder.html" />
         <option value="$PROJECT_DIR$/select-copy-execCommand.html" />
@@ -189,6 +133,9 @@
         <option value="$PROJECT_DIR$/三角形制作原理.html" />
         <option value="$PROJECT_DIR$/懒加载/README.md" />
         <option value="$PROJECT_DIR$/懒加载/lazyLoad.js插件-加载图片.html" />
+        <option value="$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/drag-drop.html" />
+        <option value="$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/2-拖动桌面程序多个文件.html" />
+        <option value="$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/3-将文件保存至桌面.html" />
       </list>
     </option>
   </component>
@@ -210,7 +157,6 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
-    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -229,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -240,41 +187,17 @@
             <path>
               <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
-              <item name="imgs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="lazyload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="lazyload" type="462c0819:PsiDirectoryNode" />
-              <item name="lazyload.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
-              <item name="懒加载" type="462c0819:PsiDirectoryNode" />
+              <item name="html5原生拖放-与数据交换-drag-drop" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/geetest/ggd-front-web-v2" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
@@ -282,15 +205,15 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\front-end\web-study-test\defer-async" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\front-end\web-study-test\html5原生拖放-与数据交换-drag-drop" />
       <recent name="C:\front-end\web-study-test\懒加载" />
       <recent name="C:\front-end\web-study-test\imgs" />
       <recent name="C:\front-end\web-study-test\transform-3d" />
       <recent name="C:\front-end\web-study-test\libs" />
-      <recent name="C:\front-end\web-study-test\velocity" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\front-end\web-study-test\defer-async" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,27 +271,28 @@
       <workItem from="1507618189150" duration="30635000" />
       <workItem from="1508120892998" duration="599000" />
       <workItem from="1508136741360" duration="16732000" />
-      <workItem from="1508465715772" duration="6930000" />
+      <workItem from="1508465715772" duration="8162000" />
+      <workItem from="1508723739769" duration="6360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154943000" />
+    <option name="totallyTimeSpent" value="162535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16853334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17013334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Weex Documents" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31991294" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3195652" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -415,30 +339,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -638,7 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1219">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -669,7 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,7 +585,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/svg-学习-css以及js动画/svg-js动画.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="460">
           <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
           <folding />
         </state>
@@ -729,7 +625,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/三角形制作原理.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
+        <state relative-caret-position="690">
           <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding />
         </state>
@@ -752,9 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -779,8 +672,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/懒加载/lazyLoad.js插件-加载图片.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        <state relative-caret-position="432">
+          <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/1-drag-drop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/2-拖动桌面程序多个文件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5原生拖放-与数据交换-drag-drop/3-将文件保存至桌面快捷方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding />
         </state>
       </provider>
