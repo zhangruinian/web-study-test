@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <style>
+        body{
+            height: 1000px;
+        }
+        input{
+            margin-top: 200px;
+            height: 40px;
+            line-height: normal;
+        }
+        .fixed{
+            position: absolute;
+            right: 50px;
+            top:45%;
+        }
+    </style>
+</head>
+<body>
+<!--软键盘弹出时，影响fixed元素定位 解决方案： 可用iScroll插件解决这个问题-->
+    <input type="search" placeholder="移动端是否偏上呢?">
+    <div class="fixed">fixed</div>
+    <script src="https://cdn.bootcss.com/eruda/1.2.6/eruda.min.js" defer="true"></script>
+    <script>
+        window.onload = function() {
+            eruda.init()
+
+        }
+    </script>
+</body>
+</html>

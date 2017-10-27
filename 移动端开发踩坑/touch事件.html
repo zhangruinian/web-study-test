@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+    <div class="touch">touch</div>
+    <script src="https://cdn.bootcss.com/eruda/1.2.6/eruda.min.js" defer="true"></script>
+    <script>
+        window.onload = function() {
+            eruda.init()
+            var oTouch = document.querySelector('.touch')
+            oTouch.ontouchstart = function () {
+                console.log('touchstart 第1')
+            }
+            oTouch.ontouchmove = function () {
+                console.log('touchmove 第2')
+            }
+            oTouch.ontouchend = function () {
+                console.log('touchend 第3')
+            }
+            oTouch.onclick = function () {
+                console.log('click 最后')
+            }
+        }
+    </script>
+</body>
+</html>

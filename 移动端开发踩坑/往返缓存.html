@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+    <div class="touch">点击浏览器得回退</div>
+    <script src="https://cdn.bootcss.com/eruda/1.2.6/eruda.min.js" defer="true"></script>
+    <script>
+        window.onload = function() {
+            eruda.init()
+        }
+        window.onunload = function() {
+            console.log('执行一下')
+            alert('浏览器回退,执行?')
+        }
+    </script>
+</body>
+</html>
