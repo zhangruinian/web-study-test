@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b919c596-f929-464c-acc5-a8b445726b26" name="Default" comment="">
+<<<<<<< HEAD
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/正则表达式/study.md" />
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/懒加载/intersectionObserver-判断元素是否可见.html" afterPath="$PROJECT_DIR$/懒加载/intersectionObserver-判断元素是否可见.html" />
     </list>
@@ -50,25 +54,56 @@
       <file leaf-file-name="intersectionObserver-判断元素是否可见.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/懒加载/intersectionObserver-判断元素是否可见.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="87">
               <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+=======
+            <state relative-caret-position="346">
+              <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="56">
               <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+=======
+      <file leaf-file-name="intersectionObserver-判断元素是否可见.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/懒加载/intersectionObserver-判断元素是否可见.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="svg-logo-各个部分一起动画.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svg-学习-css以及js动画/svg-logo-各个部分一起动画.html">
+=======
+      <file leaf-file-name="study.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/正则表达式/study.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="276">
+                <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="往返缓存.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/移动端开发踩坑/往返缓存.html">
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
               <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
@@ -104,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/simple-web-worker-gh-pages/text.html" />
         <option value="$PROJECT_DIR$/lodash-test.js" />
         <option value="$PROJECT_DIR$/defer-script浏览器测试.html" />
         <option value="$PROJECT_DIR$/defer-async/defer.js" />
@@ -155,6 +189,7 @@
         <option value="$PROJECT_DIR$/temp.json" />
         <option value="$PROJECT_DIR$/temp.js" />
         <option value="$PROJECT_DIR$/懒加载/intersectionObserver-判断元素是否可见.html" />
+        <option value="$PROJECT_DIR$/正则表达式/study.md" />
       </list>
     </option>
   </component>
@@ -200,11 +235,6 @@
               <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="web-study-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-study-test" type="462c0819:PsiDirectoryNode" />
-              <item name="懒加载" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -233,6 +263,13 @@
       <recent name="C:\front-end\web-study-test\imgs" />
       <recent name="C:\front-end\web-study-test\transform-3d" />
     </key>
+<<<<<<< HEAD
+=======
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\front-end\web-study-test" />
+      <recent name="C:\front-end\web-study-test\defer-async" />
+    </key>
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -300,7 +337,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="201144000" />
+=======
+    <option name="totallyTimeSpent" value="203574000" />
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -312,8 +353,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31861576" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3188248" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -364,13 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/select-copy-execCommand.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/background-image.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -648,6 +687,7 @@
     <entry file="file://$PROJECT_DIR$/temp.json.we" />
     <entry file="file://$PROJECT_DIR$/temp.js" />
     <entry file="file://$PROJECT_DIR$/移动端开发踩坑/fixed定位缺陷.html">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
@@ -662,6 +702,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/响应式web设计第二版/animation-float.html">
+=======
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
@@ -671,17 +713,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/懒加载/README.md">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="112">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+=======
+        <state relative-caret-position="346">
+          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/懒加载/intersectionObserver-判断元素是否可见.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="87">
           <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+=======
+        <state relative-caret-position="345">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+>>>>>>> c92324407f0e3a27a1a584fa07cd846acd261686
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/正则表达式/study.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="276">
+            <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
