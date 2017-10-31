@@ -4,27 +4,56 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body{
+        body {
             height: 2000px;
         }
-        div.test{
+
+        div.test {
             width: 200px;
-            height:200px;
+            height: 200px;
             background-color: #05D380;
             margin-top: 200px;
         }
     </style>
 </head>
 <body>
-    <div class="test"></div>
-    <script>
-        const  oTest = document.querySelector('.test')
+<div class="test"></div>
+<script>
+    const oTest = document.querySelector('.test')
 
-        const observer = new IntersectionObserver(changes =>{
-            // 每次出现都会执行以下
-            console.log('我出现了')
+    const observer = new IntersectionObserver(changes => {
+        // 每次出现都会执行以下
+        console.log('我出现了')
+    })
+    observer.observe(oTest)
+
+    ;(function(){
+        function loadImg(el) {
+            if (!el.src) {
+                const source = el.dataset.src
+                el.src = source
+                el.removeAttribute('data-src')
+            }
+        }
+
+        const io = new IntersectionObserver(entries => {
+            for (const entry of entries) {
+                const el = entry.target
+                const intersectionRatio = entry.intersectionRatio
+                if (intersectionRatio > 0 && intersectionRatio <= 1) {
+                    loadImg(el)
+                }
+                // 加载完成之后 不再observer
+                el.onload = el.onerror = () => io.unobserve(el)
+            }
         })
-        observer.observe(oTest)
-    </script>
+
+        function checkImgs() {
+            const imgs = Array.from(document.querySelectorAll('img[data-src]')
+            )
+            imgs.forEach(item => io.observe(item))
+        }
+    })()
+</script>
 </body>
 </html>
