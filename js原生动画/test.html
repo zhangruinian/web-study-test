@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.test{
+            width: 100px;
+            height: 100px;
+            background-color: #05D380;
+        }
+    </style>
+</head>
+<body>
+    <div class="test"></div>
+    <script src="timeMove.js"></script>
+    <script>
+        var test = document.querySelector('.test')
+        test.onclick = function () {
+            animateTime(test,{
+                width:'250px',
+                height: '300px',
+                opacity: '50'},3000,'easeBoth',()=>{
+                console.log('运动结束')
+            })
+        }
+    </script>
+</body>
+</html>
