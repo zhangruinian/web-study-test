@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {font-family: Helvetica, Arial, sans-serif;font-size: 12px;}h1 {font-size: 1.5em;}h2 {font-size: 1.2em;}
+        a{
+            display: inline-block; width: 20px; height: 20px; margin-left: 15px; background-color: #05D380;
+        }
+    </style>
+</head>
+<body>
+    <h1>我是h1</h1>
+    <h2>我是h2</h2>
+    <p>普通pppppppppp</p>
+    <a href="#" id="size-12">12</a><a href="#" id="size-14">14</a><a href="#" id="size-16">16</a>
+    <script>
+        function makeSizer(size) {
+            return function() {
+                document.body.style.fontSize = size + 'px';
+            };
+        }
+        var size12 = makeSizer(12);
+        var size14 = makeSizer(14);
+        var size16 = makeSizer(16);
+        /*
+        闭包允许将函数与其所操作的某些数据（环境）关连起来。
+        这显然类似于面向对象编程。在面对象编程中，对象允许我们将某些数据（对象的属性）与一个或者多个方法相关联。
+        因而，一般说来，可以使用只有一个方法的对象的地方，都可以使用闭包。
+        在Web中您可能想这样做的情形非常普遍。大部分我们所写的 Web JavaScript 代码都是事件驱动的 — 定义某种行为，
+        然后将其添加到用户触发的事件之上（比如点击或者按键）。我们的代码通常添加为回调：响应事件而执行的函数。*/
+        /*闭包的实际利用
+        相应事件的时候如果直接调用,那函数会直接生效(此时无法传参)*/
+        // 当然下面也可以直接写 makeSizer(16) 但那也是利用了闭包
+        document.getElementById('size-12').onclick = size12
+        document.getElementById('size-14').onclick = size14;
+        document.getElementById('size-16').onclick = size16;
+
+        // 如果非不利用闭包写,那直接就事件代码生效了,执行完就直接生效了
+        // 或者在事件响应函数 里面多套一个匿名函数或者具名函数 最好的方法是 直接makesizer(20)
+        /*function makeSizer(size) {
+            document.body.style.fontSize = size + 'px';
+        }
+        document.getElementById('size-12').onclick =  makeSizer(200);*/
+    </script>
+</body>
+</html>
