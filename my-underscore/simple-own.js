@@ -6,5 +6,10 @@
         return string.split("").reverse().join("")
     }
 })()
-
 console.log(_.reverse('hello'))
+
+var $= function() {};
+$.value = 1;
+$.log = function() { return this.value + 1 };
+console.log($.value); // 1
+console.log($.log()); // 2
