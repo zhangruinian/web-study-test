@@ -26,7 +26,8 @@
         console.log('我出现了')
     })
     observer.observe(oTest)
-
+    // 懒加载的封装 利用新api 而不是滚动 scroll 检测rect等
+    // 本文件夹的lazyload.js也是用的这个api
     ;(function(){
         function loadImg(el) {
             if (!el.src) {

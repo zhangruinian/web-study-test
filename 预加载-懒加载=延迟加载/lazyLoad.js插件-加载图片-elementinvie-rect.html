@@ -33,6 +33,14 @@
         console.log(lazyload())
         lazyload()
 
+        function isInSight(el) {
+            const bound = el.getBoundingClientRect();
+            const clientHeight = window.innerHeight;
+            //如果只考虑向下滚动加载
+            //const clientWidth = window.innerWidth;
+            // 此处+100是为了提前一点加载
+            return bound.top <= clientHeight + 100;
+        }
 
         function elementInViewport(el) {
             var rect = el.getBoundingClientRect()
@@ -47,6 +55,23 @@
                 rect.right <= (window.innerWidth || html.clientWidth)
             )
         }
+        // 三个函数的封装与拆分
+        function checkImgs() {
+            const imgs = document.querySelectorAll('.my-photo');
+            Array.from(imgs).forEach(el => {
+                if (elementInViewport(el)) {
+                    loadImg(el);
+                }
+            })
+        }
+
+        function loadImg(el) {
+            if (!el.src) {
+                const source = el.dataset.src;
+                el.src = source;
+            }
+        }
+
         var place = document.getElementsByClassName('place')[0]
         window.addEventListener('scroll', function () {
             console.log(elementInViewport(place))
@@ -54,6 +79,7 @@
         window.addEventListener('DOMContentLoaded', function () {
             console.log(elementInViewport(place))
         })
+        // 传统方法里面此时就可以用上函数节流了来优化
     </script>
 </body>
 </html>
