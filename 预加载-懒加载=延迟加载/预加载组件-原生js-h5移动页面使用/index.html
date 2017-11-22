@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="" alt="">
+<script src="preloadImg.js"></script>
+<script>
+    preloadImg(['../../imgs/star-lg.jpg','../../imgs/lks-s.png'], function (percentage) {
+        console.log(percentage)
+        if(percentage ===1){
+            console.log('加载完毕')
+        }
+    })
+</script>
+</body>
+</html>
