@@ -37,6 +37,7 @@ window.utils = {}
 
 /**
  * Keeps track of the current mouse position, relative to an element.
+ * 相对于element的,并不是相对于页面和视图的, 所以不可用 getBoundingClientRect
  * @param {HTMLElement} element
  * @return {object} Contains properties: x, y, event
  */
@@ -46,12 +47,30 @@ window.utils.captureMouse = function (element) {
         element_scrollLeft = document.documentElement.scrollLeft,
         body_scrollTop = document.body.scrollTop,
         element_scrollTop = document.documentElement.scrollTop,
-        /*offsetLeft = element.offsetLeft,
-        offsetTop = element.offsetTop*/
-        // 利用 getBoundingClientRect来修改做为偏移量就没有bug了
-        offsetLeft = element.getBoundingClientRect().x,
-        offsetTop = element.getBoundingClientRect().y
-
+        offsetLeft = _getElementLeft(element),
+        offsetTop = _getElementTop(element)
+        // 高程基础: 利用 getBoundingClientRect来修改做为偏移量就没有bug了
+        // 此时是换了一个值在做参考,并不是直接的此时left就等于offsetLeft left可以是负值
+        /*offsetLeft = element.getBoundingClientRect().left,
+        offsetTop = element.getBoundingClientRect().top*/
+    function _getElementLeft(element){
+        var actualLeft = element.offsetLeft;
+        var current = element.offsetParent;
+        while (current !== null){
+            actualLeft += current.offsetLeft;
+            current = current.offsetParent;
+        }
+        return actualLeft;
+    }
+    function _getElementTop(element){
+        var actualTop = element.offsetTop;
+        var current = element.offsetParent;
+        while (current !== null){
+            actualTop += current. offsetTop;
+            current = current.offsetParent;
+        }
+        return actualTop;
+    }
     element.addEventListener('mousemove', function (event) {
         var x, y
 
@@ -67,6 +86,7 @@ window.utils.captureMouse = function (element) {
 
         mouse.x = x
         mouse.y = y
+        console.log(mouse.x, mouse.y)
         mouse.event = event
     }, false)
 
