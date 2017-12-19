@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #9497FF;
+            padding-bottom: 20px}
+        .card{
+            width: 50px;
+            height: auto;
+            border: 1px solid red;
+            background-color: #05D380;
+            margin-left: 10px;
+            padding-bottom: 999px;
+            margin-bottom: -999px;
+        }
+    </style>
+</head>
+<body>
+<!--    原理:这种技术的关键是给每个框设置大的底内边距，然后用数值相似的负外边距消除这个高度。这会导致每个列溢出容器元素。如果把容器的overflow属性设置为hidden,列就在最高点被裁切。
+    知识背景:
+    1.background 会填充内边距 padding，而不会填充外边距 margin 。
+    2.通过 overflow:hidden; 根据元素最底的高度进行截取（即padding），并且div内中文字在width;height;如果没有填满会溢出到padding中。-->
+<!--缺点: 无法加border, 底部无法再加链接等按钮-->
+    <div class="wrapper">
+        <div class="card">和蔼我拖后和啊哈呢过和加端口反反复复付付付付付付付付付付付付付付付付付付付付付付付付付付付</div>
+        <div class="card">蔼我拖后和啊哈呢过和加端</div>
+        <div class="card">坎坎坷坷扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩扩</div>
+    </div>
+</body>
+</html>
