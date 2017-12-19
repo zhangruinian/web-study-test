@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<input type="file" placeholder="请上传图片" id="upload">
+<img id="preview" alt="">
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('#upload').addEventListener('change', function (event) {
+            console.log(event.target.files[0])
+            var preview = document.querySelector('#preview'),
+                url =  window.URL.createObjectURL(event.target.files[0])
+            preview.src = url
+        })
+    })
+</script>
+</body>
+</html>
