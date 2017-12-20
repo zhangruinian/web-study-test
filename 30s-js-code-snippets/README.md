@@ -180,6 +180,40 @@
     }
     // without([2, 1, 2, 3], 1, 2) -> [3]
 ```
+### 降维/压缩
+`...rest`参数.根据原始数组中的位置进行分组,多个一维数组,按照原始位置进行合并为二维数组,空缺的用undefined占位
+```js
+    const zip = (...arrays) => {
+         // 下面的...是扩展操作符,不然数组无法传入到Math.max()
+         const maxLength = Math.max(...arrays.map((item) => item.length))
+         return Array.from({length:maxLength}).map((_, i) =>{
+             return Array.from({length: arrays.length},(_, j) =>{
+                 return arrays[j][i]
+             })
+         })
+     }
+     //zip(['a', 'b'], [1, 2], [true, false]); -> [['a', 1, true], ['b', 2, false]]
+     //zip(['a'], [1, 2], [true, false]); -> [['a', 1, true], [undefined, 2, false]]
+```
+## Browser
+
+### 页面底部是否可见
+```js
+    const bottomVisible = () => {
+        return document.documentElement.clientHeight + window.scrollY >=  (document.documentElement.scrollHeight || document.documentElement.clientHeight)
+    }
+```
+### 元素是否在视窗可见
+默认完全可见,懒加载的时候会用到这个原理
+```js
+    const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
+      const { top, left, bottom, right } = el.getBoundingClientRect();
+      return partiallyVisible
+        ? ((top > 0 && top < window.innerHeight) || (bottom > 0 && bottom < window.innerHeight)) &&
+          ((left > 0 && left < window.innerWidth) || (right > 0 && right < window.innerWidth))
+        : top >= 0 && left >= 0 && bottom <= window.innerHeight && right <= window.innerWidth;
+    };
+```
 
 
 
