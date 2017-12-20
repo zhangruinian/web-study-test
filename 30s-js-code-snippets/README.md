@@ -1,4 +1,4 @@
-> 30s之内可以理解的有用的js代码片段
+> 30s之内可以理解的有用的js代码片段,原文基础上增加了部分其它代码,进行了小幅度修改,便于阅读
 注意箭头函数有无`{}`会影响是否需要再return
 
 [原文地址](https://chalarangelo.github.io/30-seconds-of-code/#capitalizeeveryword)
@@ -21,7 +21,23 @@
         },0)
     }
 ```
-### 深度扁平
+### 统计数组元素出现次数
+```js
+    const countedNames = (arr) => {
+        return arr.reduce(function (accr, name) {
+            if (name in accr) {
+                accr[name]++;
+            }
+            else {
+                accr[name] = 1;
+            }
+            return accr;
+        }, {});
+    }
+    // countedNames is:
+    // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+```
+### 深度扁平(map)
 利用`Array.concat()`和`...`扩展操作符以及递归
  ```js
     const deepFlatten = arr => {
@@ -38,5 +54,132 @@
         return arr1.filter(x => !s.has(x))
     }
 ```
+### 去重
+```js
+    const distinct = arr => [...new Set(arr)]
+    const distinct = arr => [Array.from(new Set(arr))]
+    const distinct = arr => {
+        return arr.filter((i) => arr.indexOf(i) !== arr.lastIndexOf(i))
+    }
+```
+### 过滤非唯一值
+```js
+    const filterNonUnique = arr =>{
+        return arr.filter((i) => arr.indexOf(i) === arr.lastIndexOf(i))
+    }
+```
+### 扁平一层(reduce)
+```js
+    const flatten = arr => arr.reduce((a, v) => a.concat(v), [])
+```
+### 扁平等级(depth)
+根据depth等级来扁平,默认为1
+```js
+    const flattenDepth = (arr, depth = 1) =>{
+        if (depth ===1) {
+        return arr.reduce((a, v) => a.concat(v), [])
+        }
+        return  arr.reduce((a, v) => {
+            return a.concat(Array.isArray(v) ? flattenDepth(v, depth-1) : v)
+        }, [])
+    }
+```
+### 根据范围填充
+默认0到end
+```js
+    const initialWithRange = (end, start = 0) =>{
+        return Array.from({length:end + 1 - start}).map((v, i) =>{
+            return i + start
+        })
+    }
+    const initialWithRange = (end, start = 0) =>{
+        return new Array(end + 1 - start).fill().map((v, i) =>{
+            return i + start
+        })
+    }
+```
+### 两个数组的交叉值
+```js
+ const intersection = (arr1, arr2) =>{
+    const s = new Set(arr2)
+    return arr1.filter((x) => s.has(x))
+ }
+```
+### 挑选(pick)
+从对象中挑选与给定键对应的键值对。
+```js
+    const pick = (obj, arr) =>
+      arr.reduce((acc, curr) => (curr in obj && (acc[curr] = obj[curr]), acc), {});
+    const pick = (obj, arr) => {
+        return arr.reduce((acc, curr) => {
+            curr in obj && (acc[curr] = obj[curr])
+            return acc
+        }, {})
+    }
+    // 本质,遍历检查一遍
+    const pick = (obj, arr) => {
+        var temp = {}
+        arr.forEach((item, index) => {
+            if (item in obj){
+                temp[item] = obj[item]
+            }
+        })
+        return temp
+    }
+```
+### 随机取数(sample)
+同时也适用于字符串
+```js
+    const sample = arr =>{
+        return arr[Math.floor(Math.random()*arr.length)]
+    }
+```
+### 打乱(shuffle)
+```js
+// 初级版
+    const shuffle = arr => arr.sort(() => Math.random() - 0.5)
+// random order
+    function shuffle(array) {
+        var random = array.map(Math.random)
+        return array.sort(function(a, b) {
+            return random[a] - random[b]
+        })
+    }
+// Fisher–Yates(费歇尔洗牌算法)
+    function shuffle(arr) {
+        for (let i = arr.length; i > 0; i--){
+            //下面一行的';'不可去掉,否则会报错
+            let j = Math.floor(Math.random() *i);
+            [arr[i-1], arr[j]] = [arr[j], arr[i-1]]
+        }
+        return arr
+    }
+```
+### 相似值
+```js
+ const similarity = (arr1, arr2) =>{
+    return arr1.filter((item, i) => {
+        return arr2.includes(item)
+    })
+ }
+ // similarity([1,2,3], [1,2,4]) -> [1,2]
+```
+### 联合(union)
+```js
+    const  union = (arr1, arr2) => Array.from(new Set([...arr1, ...arr2]))
+    // union([1,2,3], [4,3,2]) -> [1,2,3,4]
+```
+
+### 排除
+支持多参数传入,利用`...`剩余操作符,不修改原数组
+```js
+    const without = (arr, ...args) =>{
+        return arr.filter((item) =>{
+            return !args.includes(item)
+        })
+    }
+    // without([2, 1, 2, 3], 1, 2) -> [3]
+```
+
 
 
