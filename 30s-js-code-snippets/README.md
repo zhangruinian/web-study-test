@@ -400,3 +400,31 @@
     }
     */
 ```
+## Math
+### 数组总和
+```js
+    const arraySum = arr => {
+        return arr.reduce((acc,curr) => {
+            return acc + curr
+        },0)
+    }
+```
+### 数组平均数
+```js
+    const arrayAverage = arr => {
+        return arr.reduce((acc,curr) => {
+            return acc + curr
+        },0) / arr.length
+    }
+```
+### 数字数组化
+```js
+    const digitize = number =>{
+        return [...number.toString()]
+        // return [...''+number]
+    }
+```
+### 阶乘
+```js
+    const factorial
+```
