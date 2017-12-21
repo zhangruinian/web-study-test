@@ -303,4 +303,100 @@
     
 　　 var Y =this.getBoundingClientRect().top;
 ```
+## Function
 
+### 链式异步调用(chainAsync)
+循环遍历包含异步事件的函数数组，每次异步事件完成后再调用
+```js
+    const chainAsync = fns =>{
+        let curr = 0
+        const next = () =>{
+            fns[curr++](next)
+        }
+        next()
+    }
+    /*
+    chainAsync([
+        next => { console.log('0 seconds'); setTimeout(next, 1000); },
+        next => { console.log('1 second');  setTimeout(next, 1000); },
+        next => { console.log('2 seconds'); }
+    ])
+    */
+```
+### 组合
+执行从右到左的函数功能组合
+
+使用Array.reduce（）来执行从右到左的函数组合。最后（最右边的）函数可以接受一个或多个参数;其余的函数参数必须是一元的.
+```js
+    const compose = (...fns) => {
+        return fns.reduce((f,g) => {
+            //...args 剩余参数, args是数组,再转换为函数参数
+            return (...args) => f(g(...args))
+        })
+    }
+    /*
+    const add5 = x => x + 5
+    const multiply = (x, y) => x * y
+    const multiplyAndAdd5 = compose(add5, multiply)
+    multiplyAndAdd5(5, 2) -> 15
+    */
+```
+### 管道
+执行从左到右的函数功能组合
+
+使用Array.reduce（）和spread运算符（...）来执行从左到右的函数组合。第一个（最左边的）函数可以接受一个或多个参数;其余的功能必须是一元的。
+
+```js
+   const pipeFunctions  = (...fns) => {
+       return fns.reduce((f,g) => {
+           //...args 剩余参数, args是数组,再转换为函数参数
+           return (...args) => g(f(...args))
+       })
+   }
+    /*
+    
+    */
+```
+### promise化(promisify)
+转换异步函数以返回一个promise。相当于node的[util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original)
+使用currying返回一个函数，返回一个调用原始函数的Promise。使用... rest运算符传入所有参数。
+
+```js
+    const promisify = func => {
+        return (...args) =>{
+            return new Promise((resolve, reject) => {
+                return func(...args,(err,result) =>{
+                    return err ? reject(err) : resolve(result)
+                })
+            })
+        }
+    }
+```
+### 链式调用promise
+使用Array.reduce（）创建一个promise链，每个promise在解析后返回下一个promise
+
+```js
+    const promiseSeries = ps => {
+        return ps.reduce((p, next) => {
+            return p.then(next)
+          }, Promise.resolve())
+    }
+    // const delay = (d) => new Promise(r => setTimeout(r, d))
+    // runPromisesInSeries([() => delay(1000), () => delay(2000)]) -> executes each promise sequentially, taking a total of 3 seconds to complete
+```
+### 睡眠(sleep)
+延迟异步函数的执行,延迟执行异步函数的一部分，通过把它放到睡眠状态，返回一个Promise。
+```js
+    const sleep = ms => {
+        return new Promise((resolve,reject) => {
+            setTimeout(resolve, ms)
+        })
+    }
+    /*
+    async function sleepyWork() {
+      console.log('I\'m going to sleep for 1 second.');
+      await sleep(1000);
+      console.log('I woke up after 1 second.');
+    }
+    */
+```
