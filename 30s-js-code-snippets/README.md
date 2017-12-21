@@ -1,4 +1,4 @@
-> 30s之内可以理解的有用的js代码片段,原文基础上增加了部分其它代码,进行了小幅度修改,便于阅读
+> 原文基础上增加了其它方法以及注释等,进行了小幅度修改,便于阅读
 注意箭头函数有无`{}`会影响是否需要再return
 
 [原文地址](https://chalarangelo.github.io/30-seconds-of-code/#capitalizeeveryword)
@@ -214,7 +214,93 @@
         : top >= 0 && left >= 0 && bottom <= window.innerHeight && right <= window.innerWidth;
     };
 ```
+### 获取url查询参数
+```js
+    const getURLParameters = url =>
+        url.match(/([^?=&]+)(=([^&]*))/g).reduce(
+            (a, v) => (a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1), a), {}
+        );
+```
+### 返回页面顶部
+```js
+    const scrollToTop = () =>{
+        const distance = document.documentElement.scrollTop
+        if(distance > 0){
+            window.requestAnimationFrame(scrollToTop)
+            window.scrollTo(0, distance - distance/8)
+        }
+    }
+```
+### 浏览器窗口大小(视窗)
+> 一张网页的全部面积，就是它的大小。通常情况下，网页的大小由内容和CSS样式表决定。
+浏览器窗口的大小，则是指在浏览器窗口中看到的那部分网页面积，又叫做viewport（视口）。
 
+注意事项
+* 必须在页面加载完成后才能运行，否则document对象还没生成，浏览器会报错
+* clientWidth和clientHeight都是只读属性，不能对它们赋值。
+* window.innerWidth是包括右边滚动条的宽度的
+```js
+    const getViewport = () =>{
+        return {
+            width: document.documentElement.clientWidth,
+            height: document.documentElement.clientHeight
+        }
+    }
+```
+### 网页大小
+> 如果网页内容能够在浏览器窗口中全部显示，不出现滚动条，那么网页的clientWidth和scrollWidth应该相等。但是实际上，不同浏览器有不同的处理，这两个值未必相等。所以，我们需要取它们之中较大的那个值
+```js
+    const getPageArea = () =>{
+        return {
+            width: Math.max(document.documentElement.scrollWidth, document.documentElement.clientWidth),
+            height: Math.max(document.documentElement.scrollHeight, document.documentElement.clientHeight)
+         }
+    }
+```
+### 网页元素绝对位置
+> 指该元素的左上角相对于整张网页左上角的坐标。这个绝对位置要通过计算才能得到。
 
+1. 不断累加offsetParent的offsetTop和offsetLeft属性
+    
+    由于在表格和iframe中，offsetParent对象未必等于父容器，所以上面的函数对于表格和iframe中的元素不适用。
+    ```js
+       function getElementLeft(element){
+           var actualLeft = element.offsetLeft;
+           var current = element.offsetParent;
+       
+           while (current !== null){
+               actualLeft += current.offsetLeft;
+               current = current.offsetParent;
+           }
+           return actualLeft;
+       }
+       function getElementTop(element){
+           var actualTop = element.offsetTop;
+           var current = element.offsetParent;
+       
+           while (current !== null){
+               actualTop += current.offsetTop;
+               current = current.offsetParent;
+           }
+           return actualTop;
+       }
+    ```
+2. 利用`getBoundingClientRect`方法
 
+    此方法其中包含了left、right、top、bottom四个属性，分别对应了该元素的左上角和右下角相对于浏览器窗口（viewport）左上角的距离.(其实也就是网页元素的相对位置)
+    ```js
+       　var X= this.getBoundingClientRect().left+document.documentElement.scrollLeft;
+       
+       　var Y =this.getBoundingClientRect().top+document.documentElement.scrollTop;
+    ```
+### 网页元素相对位置
+> 网页元素的相对位置，指该元素左上角相对于浏览器窗口左上角的坐标。  
+
+有了绝对位置以后，获得相对位置就很容易了，只要将绝对坐标减去页面的滚动条滚动的距离就可以了 也就是减去`document.documentElement.scrollLeft|scrollTop`
+```js
+    //快捷方法
+    var X= this.getBoundingClientRect().left;
+    
+　　 var Y =this.getBoundingClientRect().top;
+```
 

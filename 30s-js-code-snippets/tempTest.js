@@ -1,9 +1,10 @@
-function shuffle(arr) {
-    for (let i = arr.length; i > 0; i--){
-        let j = Math.floor(Math.random() *i);
-        [arr[i-1], arr[j]] = [arr[j], arr[i-1]]
-    }
-    return arr
-}
+function getElementTop(element){
+    var actualTop = element.offsetTop;
+    var current = element.offsetParent;
 
-console.log(shuffle([1,2,3,4,5,6,7]))
+    while (current !== null){
+        actualTop += current.offsetTop;
+        current = current.offsetParent;
+    }
+    return actualTop;
+}
