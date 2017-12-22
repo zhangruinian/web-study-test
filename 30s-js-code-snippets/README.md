@@ -423,8 +423,170 @@
         return [...number.toString()]
         // return [...''+number]
     }
+    // digitize(2334) -> [2, 3, 3, 4]
 ```
-### 阶乘
+### 阶乘(factorial)
 ```js
-    const factorial
+    // 一个函数内处理的结果可以使用return 返回，这样在调用函数的地方就可以用变量接收返回
+       结果
+    const factorial = n =>{
+        // 不return的话那就不会返回这个数值 默认返回的是undefined
+        return n <= 1 ? 1 : n * factorial(n-1)
+    }
+    // factorial(6) -> 720
+```
+### 斐波那契数列(fibonacci)
+```js
+    const fibonacci = n =>{
+        return Array(n).fill(0).reduce((acc, val, i) =>{
+            return acc.concat(i >1 ? acc[i -1] + acc[i -2] : i) 
+        }, [])
+    }
+    // fibonacci(5) -> [0,1,1,2,3]
+```
+### 判断素数
+
+```js
+    const isPrime = num =>{
+        for (var  i = 2; i < num; i++) {
+            if (num % i ===0){
+                return false
+            }
+        }
+        return num >= 2;
+    }
+    // isPrime(11) -> true
+    // isPrime(12) -> false
+    // isPrime(1) -> false
+```
+### 判断回文
+```js
+    const palindrome = str =>{
+        const s = str.toLowerCase().replace(/[\w_]/g, '')
+        return s === s.split("").reverse().join('')
+    }
+    // palindrome('taco cat') -> true
+```
+### 指定范围随机整数
+```js
+    const randomIntegerRange = (min, max) =>{
+        return Math.floor(Math.random()* (max - min +1)) + min
+    }
+    //randomIntegerRange (1, 10) -> 5
+```
+### 四舍五入到指定小数位
+````js
+    const roundx = (n, decimals=0) => {
+      return Number(`${Math.round(`${n}e${decimals}`)}e-${decimals}`)
+    }
+    // roundx(1.005, 2) -> 1.01
+    const roundx = (n, decimals=0) =>{
+        return n.toFixed(decimals)
+    }
+    // roundx(1.2, 3)  -> "1.200"
+````
+### 数组标准差
+```js
+    const standardDeviation = (arr, usePopulation = false) => {
+      const mean = arr.reduce((acc, val) => acc + val, 0) / arr.length;
+      return Math.sqrt(
+        arr.reduce((acc, val) => acc.concat(Math.pow(val - mean, 2)), [])
+           .reduce((acc, val) => acc + val, 0) / (arr.length - (usePopulation ? 0 : 1))
+      );
+    };
+    // standardDeviation([10,2,38,23,38,23,21]) -> 13.284434142114991 (sample)
+```
+## Media
+
+### 语言转文字(读取文字)
+了解有关Web Speech API的[SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance)接口的更多信息。
+```js
+    const speechSynthesis = message => {
+      const msg = new SpeechSynthesisUtterance(message);
+      msg.voice = window.speechSynthesis.getVoices()[0];
+      window.speechSynthesis.speak(msg);
+    };
+    // speechSynthesis('Hello, World') -> plays the message
+```
+## Object
+### 给定数组创建对象
+```js
+    const objectFromPairs =  arr => {
+        return arr.reduce((acc, val) =>{
+            acc[val[0]] = val[1]
+            return acc
+            // return (acc[val[0]] = val[1], acc)
+        },{})
+    }
+    // objectFromPairs([['a',1],['b',2]]) -> {a: 1, b: 2}
+```
+### 给定对象创建数组
+```js
+    const objectToPairs = obj =>{
+        return Object.keys(obj).map((key) =>{
+            return [key, obj[key]]
+        })
+    }
+    // objectToPairs({a: 1, b: 2}) -> [['a',1],['b',2]])
+```
+### 对象深度选择(select)
+可以避免深度对象选择不到时的报错?
+```js
+    const select = (from, selector) =>{
+        return selector.split('.').reduce((prev,cur) =>{
+            return prev && prev[cur]
+        },from)
+    }
+     // const obj = {selector: {to: {val: 'val to select'}}};
+     // select(obj, 'selector.to.val'); -> 'val to select'
+```
+### 对象组是否都含有给定的属性
+```js
+    const truthCheckCollection = (collection, key) =>{
+        return collection.every((obj => {
+            return obj[key]
+        }))
+    }
+    // truthCheckCollection([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}], "sex") -> true
+```
+## String
+### 首字母大写(capitalize)
+```js
+    const capitalize = ([first, ...rest]) =>{
+        return first.toUpperCase() + rest.join('')
+    }
+   // capitalize('myName') -> 'MyName'
+```
+### 首字母大写每个单词
+```js
+    const capitalizeEveryWord = str =>{
+        // 匹配的单词
+        return str.replace(/\b[a-z]/g, char =>{
+            return char.toUpperCase()
+        })
+    }
+```
+### 元音字符数
+```js
+    const countVowels = str => {
+        // 匹配不到时返回null 所以用[]避免报错
+        return (str.match(/[aeiou]/ig) || []).length
+    }
+```
+#### 转义字符串
+转义字符串以在正则表达式中使用。 使用replace（）来转义特殊字符。
+```js
+    const escapeRegExp = str =>{
+        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    }
+```
+### 转换驼峰字符串
+将驼峰形式的字符串转换为指定字符分割的形式
+```js
+    const fromCamelCase = (str, separator = '_') =>{
+        return str.replace(/([a-z\d])([A-Z])/g, '$1' + separator + '$2').replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1' + separator + '$2').toLowerCase()
+    }
+    // fromCamelCase('someDatabaseFieldName', ' ') -> 'some database field name'
+    // fromCamelCase('someLabelThatNeedsToBeCamelized', '-') -> 'some-label-that-needs-to-be-camelized'
+    // fromCamelCase('someJavascriptProperty', '_') -> 'some_javascript_property'
 ```
