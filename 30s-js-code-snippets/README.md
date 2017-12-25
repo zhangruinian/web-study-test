@@ -2,6 +2,42 @@
 注意箭头函数有无`{}`会影响是否需要再return
 
 [原文地址](https://chalarangelo.github.io/30-seconds-of-code/#capitalizeeveryword)
+## Adapter
+适配器,以下大多利用闭包返回函数和...操作符(剩余操作符/扩展操作符)
+### promise化(promisify)
+转换异步函数以返回一个promise。相当于node的[util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original)
+使用currying返回一个函数，返回一个调用原始函数的Promise。使用... rest运算符传入所有参数。
+
+```js
+    const promisify = func => {
+        return (...args) =>{
+            return new Promise((resolve, reject) => {
+                return func(...args,(err,result) =>{
+                    return err ? reject(err) : resolve(result)
+                })
+            })
+        }
+    }
+    // const delay = promisify((d, cb) => setTimeout(cb, d))
+    // delay(2000).then(() => console.log('Hi!')) -> Promise resolves after 2s
+```
+### 可变参数函数转为数组参数函数
+接受一个可变参数函数并返回一个闭包，该闭包接受一个参数数组映射到该函数的输入。 使用闭包和展开运算符（...）将参数数组映射到函数的输入。
+```js
+    const spreadOver = fn =>{
+        return argsArr =>{
+            return fn(...argsArr)
+        }
+    }
+    /*
+    const arrayMax = spreadOver(Math.max)
+    arrayMax([1,2,3]) // -> 3
+    arrayMax([1,2,4]) // -> 4
+    */
+    // 简单点可以
+    // Math.max(...[1,3,5])
+```
+
 ## Array
 ### 数组最大值
 `Math.max()`和扩展操作符`...`
@@ -203,6 +239,15 @@
         return document.documentElement.clientHeight + window.scrollY >=  (document.documentElement.scrollHeight || document.documentElement.clientHeight)
     }
 ```
+### 侦测设备类型
+移动设备/桌面设备
+```js
+    const detectDeviceType = () => {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? "Mobile" : "Desktop";
+    }
+    // detectDeviceType() -> "Desktop"
+```
+
 ### 元素是否在视窗可见
 默认完全可见,懒加载的时候会用到这个原理
 ```js
@@ -303,6 +348,15 @@
     
 　　 var Y =this.getBoundingClientRect().top;
 ```
+### 滚动位置
+返回当前页面的滚动位置。请使用pageXOffset和pageYOffset， 如果已定义，否则使用scrollLeft和scrollTop。你可以省略el来使用窗口的默认值。pageXOffset是scrollY的别名(event.pageX是鼠标活动事件的属性)
+```js
+    const getScrollPosition = (el = window) =>{
+        return ({x: (el.pageXOffset !== undefined) ? el.pageXOffset : el.scrollLeft, y: (el.pageYOffset !== undefined) ? el.pageYOffset : el.scrollTop});
+    }
+      
+    // getScrollPosition() -> {x: 0, y: 200}
+```
 ## Function
 
 ### 链式异步调用(chainAsync)
@@ -357,21 +411,7 @@
     
     */
 ```
-### promise化(promisify)
-转换异步函数以返回一个promise。相当于node的[util.promisify](https://nodejs.org/api/util.html#util_util_promisify_original)
-使用currying返回一个函数，返回一个调用原始函数的Promise。使用... rest运算符传入所有参数。
 
-```js
-    const promisify = func => {
-        return (...args) =>{
-            return new Promise((resolve, reject) => {
-                return func(...args,(err,result) =>{
-                    return err ? reject(err) : resolve(result)
-                })
-            })
-        }
-    }
-```
 ### 链式调用promise
 使用Array.reduce（）创建一个promise链，每个promise在解析后返回下一个promise
 
@@ -589,4 +629,85 @@
     // fromCamelCase('someDatabaseFieldName', ' ') -> 'some database field name'
     // fromCamelCase('someLabelThatNeedsToBeCamelized', '-') -> 'some-label-that-needs-to-be-camelized'
     // fromCamelCase('someJavascriptProperty', '_') -> 'some_javascript_property'
+```
+### 转换左右
+```js
+    const reverseString = str =>{
+        return str.split('').reverse().join('')
+    }
+    // reverseString('foobar') -> 'raboof'
+```
+### 按照字母排序
+```js
+    const sortCharactersInString = str =>{
+       return  str.split('').sort((a, b) => {
+           return a.localeCompare(b)
+       }).join('');
+    }
+    // sortCharactersInString('cabbage') -> 'aabbceg'
+```
+### 转为驼峰
+使用replace（）去除下划线，连字符和空格，并将单词转换为camelcase。
+```js
+    const toCamelCase = str =>{
+        return str.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2, offset) =>{
+           return p2 ? p2.toUpperCase() : p1.toLowerCase()
+        })
+    }
+    // toCamelCase("some_database_field_name") -> 'someDatabaseFieldName'
+    // toCamelCase("Some label that needs to be camelized") -> 'someLabelThatNeedsToBeCamelized'
+    // toCamelCase("some-javascript-property") -> 'someJavascriptProperty'
+    // toCamelCase("some-mixed_string with spaces_underscores-and-hyphens") -> 'someMixedStringWithSpacesUnderscoresAndHyphens'
+```
+### 转为单词数组
+使用String.split（）与提供的模式（默认为非alpha作为正则表达式）来转换为字符串数组。使用Array.filter（）删除任何空字符串。
+```js
+    const words = (str, pattrern = /[^a-zA-Z-]+/) =>{
+        return str.split(pattrern).filter(Boolean)
+    }
+   
+    // ["I", "love", "javaScript", ""]
+    // words("I love javaScript!!") -> ["I", "love", "javaScript"]
+    // ["python", "javaScript", "coffee"]
+    // words("python, javaScript & coffee") -> ["python", "javaScript", "coffee"]
+ ```
+ ## Utility
+ ### 扩展Hex(16进制颜色)
+ 将3位数的颜色代码扩展为6位数的颜色代码
+ ```js
+    const extendHex = shortHex => {
+        return '#' + shortHex.slice(shortHex.startsWith('#') ? 1 : 0).split('').map( s => s+s).join("")
+    }
+```
+### 值的类型
+```js
+    const getType = v =>{
+        v === undefined ? 'undefined' : v === null ? 'null' : v.constructor.name.toLowerCase()
+    }   
+    // getType(new Set([1,2,3])) -> "set"
+```
+### 十六进制颜色转rgb
+如果提供了alpha值，则将颜色代码转换为rgb（）或rgba（）字符串。 使用＆（和）运算符，按位右移运算符和掩码位将具有RGB值的十六进制颜色代码（带或不带前缀＃）转换为字符串。如果是3位数的颜色代码，则先转换为6位数字版本。如果一个alpha值和6位十六进制一起提供，则返回rgba（）字符串。
+```js
+
+    const hexToRGB = hex => {
+      let alpha = false, h = hex.slice(hex.startsWith('#') ? 1 : 0);
+      if (h.length === 3) h = [...h].map(x => x + x).join('');
+      else if (h.length === 8) alpha = true;
+      h = parseInt(h, 16);
+      return 'rgb' + (alpha ? 'a' : '') + '('
+        + (h >>> (alpha ? 24 : 16)) + ', '
+        + ((h & (alpha ? 0x00ff0000 : 0x00ff00)) >>> (alpha ? 16 : 8)) + ', '
+        + ((h & (alpha ? 0x0000ff00 : 0x0000ff)) >>> (alpha ? 8 : 0))
+        + (alpha ? `, ${(h & 0x000000ff)}` : '') + ')';
+    };
+
+    // hexToRGB('#27ae60ff') -> 'rgba(39, 174, 96, 255)'
+    // hexToRGB('27ae60') -> 'rgb(39, 174, 96)'
+    // hexToRGB('#fff') -> 'rgb(255, 255, 255)'
+```
+ ### 随机十六进制颜色
+ 使用Math.random生成一个随机的24位（6x4bits）十六进制数字。使用位移，然后使用toString（16）将其转换为十六进制字符串。
+ ```js
+    
 ```
