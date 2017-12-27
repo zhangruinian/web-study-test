@@ -34,7 +34,11 @@
                     progress.innerHTML = ev.loaded + "/" + ev.total;
                 }
             }
-            fileReader.onload = function () {
+            fileReader.onload = function (e) {
+                console.log(e)
+               // var base64 = e.target.result
+                // 下面也是base64
+                console.log(fileReader.result)
                 preview.src = fileReader.result
             }
             fileReader.onerror = function () {
