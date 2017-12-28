@@ -46,6 +46,13 @@
             }
         })
     })
+//    ajax 上传
+    var form  = new FormData()
+//    form.append('file', vm.$refs.upload.files[0])
+    form.append('file', event.target.files[0])
+    form.append('gt_id', gt_id)
+    form.append('type', type)
+    axios.post(`serverUrl/`, form, config).then()
 </script>
 </body>
 </html>
