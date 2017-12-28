@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .father{
+            width: 1000px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px  solid;
+            background-color: #05D380;
+            position: relative;
+        }
+        .sub{
+            width: 30%;
+            height: 30%;
+            border: 1px solid;
+            background-color: #9497FF;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            padding: 5%;
+            margin: 5%;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>* 相对于父元素宽度计算的有:  `width`, `left`,`right`, `margin`, `padding`</li>
+    <li>* 相对于父元素高度计算的有: `height`,`top`, `bottom`</li>
+</ul>
+
+    <div class="father">
+        父元素 width: 1000px
+        height: 600px
+        <div class="sub">
+            sub
+        </div>
+    </div>
+</body>
+</html>
