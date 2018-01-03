@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #05D380;
+        }
+    </style>
+</head>
+<body>
+11111111111
+<script>
+    document.body.style.backgroundColor = 'red'
+    function Fibonacci (n) {
+        if ( n <= 1 ) {return 1};
+
+        return Fibonacci(n - 1) + Fibonacci(n - 2);
+    }
+    console.log(Fibonacci(45))
+    /*setTimeout(()=>{
+        console.log(Fibonacci(45))
+    },0)*/
+    document.body.style.backgroundColor = 'gray'
+</script>
+</body>
+</html>
