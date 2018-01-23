@@ -14,15 +14,18 @@
     eventInput.addEventListener("keypress", function () {
         console.log('keypress')
     })
+    // 输入实际字符 比如中文拼音
     eventInput.addEventListener("textInput", function () {
         console.log('textInput')
     })
+    // 一直触发
     eventInput.addEventListener("input", function () {
         console.log('input')
     })
     eventInput.addEventListener("keyup", function () {
         console.log('keyup')
     })
+    // 值改变且焦点触发
     eventInput.addEventListener("change", function () {
         console.log('change')
     })
