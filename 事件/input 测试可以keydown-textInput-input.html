@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="event">
+<script>
+    var eventInput = document.querySelector('#event')
+    eventInput.addEventListener("keydown", function () {
+        console.log('keydown')
+    })
+    eventInput.addEventListener("keypress", function () {
+        console.log('keypress')
+    })
+    eventInput.addEventListener("textInput", function () {
+        console.log('textInput')
+    })
+    eventInput.addEventListener("input", function () {
+        console.log('input')
+    })
+    eventInput.addEventListener("keyup", function () {
+        console.log('keyup')
+    })
+    eventInput.addEventListener("change", function () {
+        console.log('change')
+    })
+</script>
+</body>
+</html>
