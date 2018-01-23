@@ -5,7 +5,6 @@ class Person{
         this.job = job
         this.friends = ['a','b']
     }
-
     sayName (){
         console.log(this.name)
     }
