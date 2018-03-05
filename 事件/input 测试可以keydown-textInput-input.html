@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="event">
+<script>
+    var eventInput = document.querySelector('#event')
+    eventInput.addEventListener("keydown", function () {
+        console.log('keydown')
+    })
+    eventInput.addEventListener("keypress", function () {
+        console.log('keypress')
+    })
+    // 输入实际字符 比如中文拼音
+    eventInput.addEventListener("textInput", function () {
+        console.log('textInput')
+    })
+    // 一直触发
+    eventInput.addEventListener("input", function () {
+        console.log('input')
+    })
+    eventInput.addEventListener("keyup", function () {
+        console.log('keyup')
+    })
+    // 值改变且焦点触发
+    eventInput.addEventListener("change", function () {
+        console.log('change')
+    })
+</script>
+</body>
+</html>

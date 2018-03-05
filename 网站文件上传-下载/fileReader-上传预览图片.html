@@ -34,7 +34,11 @@
                     progress.innerHTML = ev.loaded + "/" + ev.total;
                 }
             }
-            fileReader.onload = function () {
+            fileReader.onload = function (e) {
+                console.log(e)
+               // var base64 = e.target.result
+                // 下面也是base64
+                console.log(fileReader.result)
                 preview.src = fileReader.result
             }
             fileReader.onerror = function () {
@@ -42,6 +46,13 @@
             }
         })
     })
+//    ajax 上传
+    var form  = new FormData()
+//    form.append('file', vm.$refs.upload.files[0])
+    form.append('file', event.target.files[0])
+    form.append('gt_id', gt_id)
+    form.append('type', type)
+    axios.post(`serverUrl/`, form, config).then()
 </script>
 </body>
 </html>

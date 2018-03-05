@@ -709,5 +709,27 @@
  ### 随机十六进制颜色
  使用Math.random生成一个随机的24位（6x4bits）十六进制数字。使用位移，然后使用toString（16）将其转换为十六进制字符串。
  ```js
-    
+    const randomHexColorCode = () =>{
+        return '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    } 
+    // randomHexColorCode() -> "#e34155"
+    // randomHexColorCode() -> "#fd73a6"
+    // randomHexColorCode() -> "#4144c6"
+```
+### rgb转hex颜色
+将RGB的值转换为颜色代码。 使用按位左移运算符（<<）和toString（16），然后padStart（6，“0”）将给定的RGB参数转换为十六进制字符串以获得6位十六进制值。
+```js
+    const RGBToHex = (r, g, b) => {
+        return ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
+    }
+    // RGBToHex(255, 165, 1) -> 'ffa501'
+```
+### UUID生成器
+使用crypto API生成符合RFC4122版本4的UUID。
+```js
+    const UUIDGenerator = () =>
+      ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+      );
+    // UUIDGenerator() -> '7982fcfe-5721-4632-bede-6000885be57d'
 ```

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var request, database
+    request = indexedDB.open('admin')
+    var user = {
+        username: '007',
+        firstName: 'james',
+        lastName: 'bond',
+        password: '123',
+    }
+    request.onsuccess = function (event) {
+        database = event.target.result
+        console.log(database)
+        // 创建对象存储空间 = 表, 保存的对象就是表中的记录
+//        var store =  database.createObjectStore('users', {keyPath:'username'})
+    }
+    request.onerror = function (event) {
+        console.log('打开database失败' + event.target.errorCode)
+    }
+
+
+</script>
+</body>
+</html>
