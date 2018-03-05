@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <style>
+        #page1{
+            height: 600px;
+            background-color: #05D380;
+        }
+        #page2{
+            height: 600px;
+            background-color: #05D380;
+        }
+    </style>
+</head>
+<body>
+<div id="printContent">
+    <div id="page1">这是第一页内容</div>
+    <!--这里用到分页样式-->
+    <div style="page-break-after: always;"></div>
+
+    <div id="page2">这是第二页内容, 表头.</div>
+    <!--<div style="page-break-after: always;"></div>-->
+
+</div>
+<div>
+    <input type="button" id="printButton" value="打印"/>
+</div>
+
+<script src="../libs/jquery-3.2.1.min.js"></script>
+<script>
+    $("#printButton").click(function () {
+       /* var bodyContent = $('body').html()
+        var printContent = $('#printContent').html()
+        //将body内容替换后进行打印操作，再把body内容还原
+        $('body').html(printContent)
+        window.print()
+        $('body').html(bodyContent)*/
+       window.print()
+    })
+</script>
+</body>
+</html>
