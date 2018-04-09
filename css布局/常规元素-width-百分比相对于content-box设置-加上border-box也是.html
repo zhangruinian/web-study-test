@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
+
         .father {
-            width: 200px;
-            height: 100px;
+            width: 400px;
+            height: 200px;
+            padding:10px;
+            border: 5px solid purple;
             background-color: #05D380;
+            box-sizing: border-box;
         }
         .son{
-            width: 50px;
+            width:50%;
             height: 30px;
             border: 1px solid red;
-            margin: 20%;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
 <div style="height:1px;overflow:hidden;background:red">
-    22222222222
+
 </div>
 <div class="father">
+    父元素设置了border-box之后,有左右10px padding 此时子元素的width 50%那就是 (200 - 20)/2
+    border去除
     <div class="son">
         son
     </div>
