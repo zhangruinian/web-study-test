@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+    /*明白了padding设置原理,影响,再实现任意的宽高比,都可以实现了*/
+    /*overflow属性，它的计算是包括div的content和padding的，也就是说*/
+        .container{
+            width: 100px;
+            height: 100px;
+            background-color: #05D380;
+        }
+        .content{
+            width: 33%;
+            height: 0;
+            padding-bottom: 100%;
+            background-color: #3300ff;
+        }
+        .father{
+            width: 200px;
+            background-color: #05D380;
+        }
+        .son{
+            width: 100%;
+            height: 0;
+            padding-bottom: calc(100% * 3/4);
+            display: flex;
+            justify-content: center;
+            /*下面垂直居中不生效*/
+
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            1111
+        </div>
+    </div>
+    <div class="father">
+        <div class="son">
+            3:4
+        </div>
+    </div>
+</body>
+</html>
