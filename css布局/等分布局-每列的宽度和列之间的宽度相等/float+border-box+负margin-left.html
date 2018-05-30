@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body,.parent{
+            width: 100%;
+        }
+        .parent{
+            width: 600px;
+            background-color: #3300ff;
+            margin-left: -20px;
+        }
+        .column{
+            width: 25%;
+            float: left;
+            height: 100px;
+            /*background-color: #05D380;*/
+            border: 1px solid;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<!--由于背景和border的原因并不实用-->
+<div class="parent">
+    <div class="column">1</div>
+    <div class="column">2</div>
+    <div class="column">3</div>
+    <div class="column">4</div>
+</div>
+</body>
+</html>

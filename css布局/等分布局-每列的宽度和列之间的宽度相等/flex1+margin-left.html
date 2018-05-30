@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body,.parent{
+            width: 100%;
+        }
+        .parent{
+            width: 600px;
+            background-color: #3300ff;
+            display: flex;
+        }
+        .column{
+            /*width: 25%;*/
+            /*最重要得是父元素的flex 导致减去剩余之后的flex1平分*/
+            /*单独的这样写25%时候不用flex,margin不计算在宽度内, 导致不够平分*/
+            flex: 1;
+            height: 100px;
+            background-color: #05D380;
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+        .column + .column{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--由于背景和border的原因并不实用-->
+<div class="parent">
+    <div class="column">1</div>
+    <div class="column">2</div>
+    <div class="column">3</div>
+    <div class="column">4</div>
+</div>
+</body>
+</html>

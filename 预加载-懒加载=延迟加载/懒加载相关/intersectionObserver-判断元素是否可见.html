@@ -10,7 +10,7 @@
 
         div.test {
             width: 200px;
-            height: 200px;
+            height: 600px;
             background-color: #05D380;
             margin-top: 200px;
         }
@@ -18,14 +18,15 @@
 </head>
 <body>
 <div class="test"></div>
+<img alt="..." data-src="../../imgs/star-lg.jpg">
 <script>
-    const oTest = document.querySelector('.animation-time-test')
+    /*const oTest = document.querySelector('.animation-time-test')
 
     const observer = new IntersectionObserver(changes => {
         // 每次出现都会执行以下
         console.log('我出现了')
     })
-    observer.observe(oTest)
+    observer.observe(oTest)*/
     // 懒加载的封装 利用新api 而不是滚动 scroll 检测rect等
     // 本文件夹的lazyload.js也是用的这个api
     ;(function(){
@@ -38,6 +39,7 @@
         }
 
         const io = new IntersectionObserver(entries => {
+            console.log(entries)
             for (const entry of entries) {
                 const el = entry.target
                 const intersectionRatio = entry.intersectionRatio
@@ -54,6 +56,7 @@
             )
             imgs.forEach(item => io.observe(item))
         }
+        checkImgs()
     })()
 </script>
 </body>
