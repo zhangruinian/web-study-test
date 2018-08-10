@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="down">下载</button>
+<script>
+    var a = {}
+    document.querySelector('.down').addEventListener('click', function () {
+        console.log('kaishi')
+        var blob = new Blob(['3333'], {type: 'text/plain'})
+        var link = document.createElement('a')
+        link.href = window.URL.createObjectURL(blob)
+        link.download = '文件名'
+        link.click()
+    })
+</script>
+</body>
+</html>
